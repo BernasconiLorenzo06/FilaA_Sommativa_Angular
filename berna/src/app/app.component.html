@@ -1,0 +1,6 @@
+<!--serve a visuallizzare driving list i mezzi-->
+<div *ngFor = 'let mezzo of listaMezzi'>
+  <app-driving-list [mezzo] = 'mezzo'></app-driving-list>
+  <button (click) = 'noleggia(mezzo)'>Noleggia</button>
+</div>
+<app-rented [mezzoSelezionato] = 'mezzoSelezionato' *ngIf ='selezionato'></app-rented>
